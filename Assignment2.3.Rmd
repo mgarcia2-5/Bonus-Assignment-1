@@ -1,0 +1,57 @@
+---
+title: "Assignment 2.3"
+author: "Mia Garcia"
+date: "9/30/2024"
+output:
+  html_document:
+    df_print: paged
+subtitle: 'CPSC 292 Section 02'
+---
+
+## Assignment 2.3 
+
+```{r, include=TRUE}
+# Loading required libraries
+
+```
+
+### Question 1
+
+*Create a plot using base graphics (not ggplot!) the `Loblolly` data set that graphs height versus age. Color each point by the Seed number. Make sure that the code displays along with your plot. Include all parts of the code (including anything you used to figure out how to construct the plot). *
+
+```{r, include=TRUE}
+plot(Loblolly$age, Loblolly$height,
+     pch = 16,                        
+     col = as.numeric(Loblolly$Seed), 
+     xlab = "Age (years)", 
+     ylab = "Height (ft)",
+     main = "Loblolly Pine Growth by Seed")
+```
+
+## Question 2
+
+*Now add lines to the plot in Question 1. The lines should connect individual Seed numbers only, and should be the same color as the points. Make this a separate code chunk by copying the first plot over to this question.*
+
+
+```{r, include=TRUE}
+plot(Loblolly$age, Loblolly$height,
+     pch = 16,                        
+     col = as.numeric(Loblolly$Seed), 
+     xlab = "Age (years)", 
+     ylab = "Height (ft)",
+     main = "Loblolly Pine Growth by Seed")
+for (seed in unique(Loblolly$Seed)) {
+  individual.seed <- Loblolly[Loblolly$Seed == seed, ]
+  lines(individual.seed$age, individual.seed$height, col = as.numeric(seed))
+}
+
+```
+This plot shows the height of a Pine Tree and how it increases overtime with each per seed. The seeds are color coded to differentiate growth. 
+
+
+Sources:
+Loblolly function - RDocumentation. (n.d.). https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/Loblolly 
+
+-Used lecture notes primarily from 2.4 CompoundCode, Bluecrab graphing Rmd notes, and 2.6 notes. 
+
+-fixed line 43, added (seed in unique(Loblolly$Seed)) {  line of code because it connects the individual seed numbers only, avoids overlap (asked google). 
