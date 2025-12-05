@@ -28,6 +28,9 @@ plot(Loblolly$age, Loblolly$height,
      main = "Loblolly Pine Growth by Seed")
 ```
 
+##This plot represents height versus age for the Loblolly data set. 
+
+
 ## Question 2
 
 *Now add lines to the plot in Question 1. The lines should connect individual Seed numbers only, and should be the same color as the points. Make this a separate code chunk by copying the first plot over to this question.*
