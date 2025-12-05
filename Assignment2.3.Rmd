@@ -49,7 +49,7 @@ for (seed in unique(Loblolly$Seed)) {
 }
 
 ```
-This plot shows the height of a Pine Tree and how it increases overtime with each per seed. The seeds are color coded to differentiate growth. 
+##This plot shows the height of a Pine Tree and how it increases overtime with each per seed. The seeds are color coded to differentiate growth. 
 
 
 Sources:
