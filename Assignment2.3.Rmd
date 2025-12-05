@@ -24,12 +24,13 @@ plot(Loblolly$age, Loblolly$height,
      pch = 16,                        
      col = as.numeric(Loblolly$Seed), 
      xlab = "Age (years)", 
-     ylab = "Height (ft)",
+     ylab = "Height (feet)",
      main = "Loblolly Pine Growth by Seed")
 ```
 
 ##This plot represents height versus age for the Loblolly data set. 
 
+##I changed the y-axis title from ft to feet. 
 
 ## Question 2
 
@@ -50,6 +51,7 @@ for (seed in unique(Loblolly$Seed)) {
 
 ```
 ##This plot shows the height of a Pine Tree and how it increases overtime with each per seed. The seeds are color coded to differentiate growth. 
+
 
 
 Sources:
